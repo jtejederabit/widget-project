@@ -1,7 +1,6 @@
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { createPinia, setActivePinia } from 'pinia';
 import { useWidgetStore } from '../../src/stores/widget';
-import { fetchWidgets } from "../../src/services/fetchWidgets";
 
 vi.mock("../../src/services/fetchWidgets", () => ({
     fetchWidgets: vi.fn(() => Promise.resolve([

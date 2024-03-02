@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Widgets from './components/Widgets.vue'
+import Widgets from './components/WidgetsContainer.vue'
 </script>
 
 <template>
@@ -13,5 +13,4 @@ import Widgets from './components/Widgets.vue'
   display: flex;
   height: 100vh;
 }
-
 </style>
