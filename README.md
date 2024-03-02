@@ -7,7 +7,7 @@ Coding test - Vue 3 + TypeScript + Vite + Pinia
 
 ## Extra Libraries
 
-- Vitest (Testing) - Used to test React components
+- Vitest (Testing) - Used to test components
 - Pinia - State management library
 
 ## Why Pinia? (Pinia vs Vuex)
