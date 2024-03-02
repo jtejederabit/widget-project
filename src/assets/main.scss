@@ -1,0 +1,30 @@
+@import './base.css';
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
+
+$color-blue: #2E3A8C;
+$color-beige: #F2EBDB;
+$color-green: #3B755F;
+$color-white: #ffffff;
+$color-black: #212121;
+
+:root {
+    --color-blue: #{$color-blue};
+    --color-beige: #{$color-beige};
+    --color-green: #{$color-green};
+    --color-white: #{$color-white};
+    --color-black: #{$color-black};
+}
+
+.toggle-knob-shadow {
+    opacity: 0;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(175, 198, 189, 0.5);
+    border-radius: 29.49px;
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    transition: opacity 300ms ease-in-out, transform 0.2s ease-in-out;
+    pointer-events: none;
+    z-index: 2;
+}
