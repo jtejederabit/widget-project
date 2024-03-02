@@ -1,6 +1,6 @@
 import { describe, it, expect, vi } from 'vitest';
 import { mount } from '@vue/test-utils';
-import ToggleButton from '../../src/components/UI/Toggle.vue';
+import ToggleButton from '../../src/components/UI/ToggleButton.vue';
 
 describe('ToggleButton', () => {
     it('It should check active state correctly', async () => {

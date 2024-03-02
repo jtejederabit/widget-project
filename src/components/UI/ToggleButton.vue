@@ -1,14 +1,14 @@
 <script setup lang="ts">
 const props = defineProps<{
-  id: number;
-  active: boolean;
-  handler: () => void;
-}>();
+  id: number
+  active: boolean
+  handler: () => void
+}>()
 </script>
 
 <template>
-  <div class="toggle-button" :class="{ 'active': props.active }" @click="props.handler()">
-    <div class="toggle-knob-shadow" :style="{ top: '-3.9px', left: '-3.1px' }"/>
+  <div class="toggle-button" :class="{ active: props.active }" @click="props.handler()">
+    <div class="toggle-knob-shadow" :style="{ top: '-3.9px', left: '-3.1px' }" />
     <div class="toggle-knob"></div>
   </div>
 </template>
@@ -17,10 +17,12 @@ const props = defineProps<{
 .toggle-button {
   width: 46.49px;
   height: 23.25px;
-  background-color: #F9F9F9;
+  background-color: #f9f9f9;
   border: rgba(175, 198, 189, 0.59) solid 0.568px;
   box-shadow: 0 0.884669303894043px 5.897795677185059px 0 #00000026 inset;
-  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  transition:
+    transform 0.2s ease-in-out,
+    background-color 0.2s ease-in-out;
   border-radius: 25px;
   position: relative;
   cursor: pointer;
@@ -35,7 +37,7 @@ const props = defineProps<{
   .toggle-knob {
     width: 23.5px;
     height: 23.5px;
-    background-color: #F9F9F9;
+    background-color: #f9f9f9;
     border-radius: 29.49px;
     outline: rgba(242, 235, 219, 0.59) solid 0.68px;
     box-shadow: 0 0 1.3672161102294922px 0 #00000059;
@@ -48,7 +50,7 @@ const props = defineProps<{
 
   &.active {
     background-color: var(--color-green);
-    border: #B0B0B0 solid 0.68px;
+    border: #b0b0b0 solid 0.68px;
     box-shadow: 0 1.0254120826721191px 6.836080551147461px 0 #00000026 inset;
 
     .toggle-knob {

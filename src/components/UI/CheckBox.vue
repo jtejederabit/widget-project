@@ -1,15 +1,21 @@
 <script setup lang="ts">
 const props = defineProps<{
-  id: number;
-  linked: boolean;
-  handler: () => void;
-}>();
+  id: number
+  linked: boolean
+  handler: () => void
+}>()
 </script>
 
 <template>
   <div class="custom-checkbox">
-    <input type="checkbox" :id="`checkbox-${props.id}`" :checked="props.linked" @change="props.handler()" hidden />
-    <label :for="`checkbox-${props.id}`" class="checkbox-label" ></label>
+    <input
+      type="checkbox"
+      :id="`checkbox-${props.id}`"
+      :checked="props.linked"
+      @change="props.handler()"
+      hidden
+    />
+    <label :for="`checkbox-${props.id}`" class="checkbox-label"></label>
     <div class="toggle-knob-shadow"></div>
   </div>
 </template>
@@ -29,7 +35,9 @@ const props = defineProps<{
   background-color: var(--color-white);
   display: inline-block;
   border-radius: 4px;
-  transition: border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  transition:
+    border-color 0.2s ease-in-out,
+    background-color 0.2s ease-in-out;
   z-index: 1;
 }
 
@@ -49,27 +57,29 @@ const props = defineProps<{
   display: none;
 }
 
-input[type="checkbox"]:checked + .checkbox-label::after {
+input[type='checkbox']:checked + .checkbox-label::after {
   display: block;
 }
 
-input[type="checkbox"]:checked + .checkbox-label {
+input[type='checkbox']:checked + .checkbox-label {
   background-color: var(--color-green);
   border-color: var(--color-green);
-  transition: border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  transition:
+    border-color 0.2s ease-in-out,
+    background-color 0.2s ease-in-out;
 }
-input[type="checkbox"]:focus + .checkbox-label {
+input[type='checkbox']:focus + .checkbox-label {
   box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
 }
 
-input[type="checkbox"]:hover + .checkbox-label {
+input[type='checkbox']:hover + .checkbox-label {
   background-color: var(--color-green);
 }
 
-input[type="checkbox"]:not(:checked) + .checkbox-label:hover {
+input[type='checkbox']:not(:checked) + .checkbox-label:hover {
   background-color: #e6e6e6;
 }
-input[type="checkbox"]:checked + .checkbox-label:hover {
+input[type='checkbox']:checked + .checkbox-label:hover {
   background-color: var(--color-green);
 }
 </style>
