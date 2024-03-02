@@ -2,7 +2,8 @@
 
 Coding test - Vue 3 + TypeScript + Vite + Pinia
 
-![widget-project-screen.gif](..%2Fwidget-project-screen.gif)
+![widget-project-screen](https://github.com/jtejederabit/widget-project/assets/130762129/b00f3eff-d97a-4f98-92a2-cd063652d533)
+
 
 ## Extra Libraries
 
