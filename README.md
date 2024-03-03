@@ -2,6 +2,10 @@
 
 Coding test - Vue 3 + TypeScript + Vite + Pinia
 
+<img src="https://skillicons.dev/icons?i=vue,typescript,pinia,vite,vitest,css" />
+
+
+
 [Live Demo](https://widget-project-nine.vercel.app/)
 
 ![widget-project-screen](https://github.com/jtejederabit/widget-project/assets/130762129/b00f3eff-d97a-4f98-92a2-cd063652d533)
@@ -37,6 +41,14 @@ Coding test - Vue 3 + TypeScript + Vite + Pinia
 ### **Code**
 
 ![img_4.png](img_4.png)
+
+## Dev Notes
+Given the client's use of Vue.js and TypeScript, I've developed the solution using Vue version 3 along with TypeScript. While Vuex was mentioned, I found it more optimal and advisable to use Pinia for state management today. Pinia's ease of use and its integration with both Vue 3 and TypeScript provide an excellent development experience, ensuring type safety and performance. Although no CSS library was specified, I chose to design purely with SCSS to make the build lighter. I've abstracted the components as much as possible, partly keeping the SOLID principles in mind for better code readability and structure.
+
+Through Pinia, detailed states mentioned in the task description, such as color mutations and the control of checkboxes and toggle buttons, are managed. I've added extra animations like transitions when changing colors, shading for the checkbox and toggle button in the ripple effect, and in color selection, making the transitions smoother.
+
+I opted to use SCSS and create a global color palette for use in the solution. I've conducted tests using Vitest on both the abstracted components and those created for the UI (checkbox, toggle button, color selector).
+
 ## Run Locally
 
 Clone the project
