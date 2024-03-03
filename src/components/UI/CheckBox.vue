@@ -8,13 +8,7 @@ defineProps<{
 
 <template>
   <div class="checkbox-container">
-    <input
-      type="checkbox"
-      :id="`checkbox-${id}`"
-      :checked="linked"
-      @change="handler()"
-      hidden
-    />
+    <input type="checkbox" :id="`checkbox-${id}`" :checked="linked" @change="handler()" hidden />
     <label :for="`checkbox-${id}`" class="checkbox-label"></label>
     <div class="ripple-shadow"></div>
   </div>

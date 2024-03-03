@@ -28,6 +28,15 @@ Coding test - Vue 3 + TypeScript + Vite + Pinia
 - No component library was used. All components were written from scratch.
 - You can run the project with Docker or locally. (check the instructions below)
 
+## Design vs Code
+
+### **Design**
+
+![img_2.png](img_2.png)
+
+### **Code**
+
+![img_4.png](img_4.png)
 ## Run Locally
 
 Clone the project
