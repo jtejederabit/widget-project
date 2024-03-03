@@ -22,7 +22,9 @@ const textColor = computed(() => {
     </div>
     <div class="widget-badge-description" :style="{ backgroundColor: 'inherit', color: textColor }">
       <h3>This product {{ widget.action }}</h3>
-      <h1>{{ widget.amount }} {{ widget.type }}</h1>
+      <h1>
+        {{ widget.amount }}{{ widget.action === 'offsets' ? 'kgs of' : '' }} {{ widget.type }}
+      </h1>
     </div>
   </div>
 </template>

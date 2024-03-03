@@ -15,7 +15,10 @@ const handleToggleLinked = (id: number) => {
   widgetStore.toggleLinkToProfile(id)
 }
 
-const handleToggleColor = (payload: { id: number; color: 'white' | 'black' | 'blue' | 'green' | 'beige' }) => {
+const handleToggleColor = (payload: {
+  id: number
+  color: 'white' | 'black' | 'blue' | 'green' | 'beige'
+}) => {
   widgetStore.changeWidgetColor(payload.id, payload.color)
 }
 </script>
@@ -75,6 +78,7 @@ const handleToggleColor = (payload: { id: number; color: 'white' | 'black' | 'bl
     }
     h3 {
       font-family: 'Cabin', sans-serif;
+      font-weight: 700;
       font-size: 30px;
       color: var(--color-black);
     }
