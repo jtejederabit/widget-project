@@ -32,7 +32,10 @@ export const useWidgetStore = defineStore('widgets', () => {
     }
   }
 
-  function changeWidgetColor(id: number, color: string): void {
+  function changeWidgetColor(
+    id: number,
+    color: 'white' | 'black' | 'blue' | 'green' | 'beige'
+  ): void {
     const widget: Widget | undefined = widgets.value.find((widget: Widget) => widget.id === id)
     if (widget) {
       widget.selectedColor = color
