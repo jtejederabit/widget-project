@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const props = defineProps<{
+defineProps<{
   id: number
   active: boolean
   handler: () => void
@@ -7,8 +7,8 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div class="toggle-button" :class="{ active: props.active }" @click="props.handler()">
-    <div class="toggle-knob-shadow" :style="{ top: '-3.9px', left: '-3.1px' }" />
+  <div class="toggle-button" :class="{ active: active }" @click="handler()">
+    <div class="ripple-shadow" :style="{ top: '-3.9px', left: '-3.1px' }" />
     <div class="toggle-knob"></div>
   </div>
 </template>
@@ -29,7 +29,7 @@ const props = defineProps<{
   -webkit-tap-highlight-color: transparent;
 
   &:hover {
-    .toggle-knob-shadow {
+    .ripple-shadow {
       opacity: 0.6;
     }
   }
@@ -59,7 +59,7 @@ const props = defineProps<{
       box-shadow: 0 0 1.3672161102294922px 0 #00000059;
     }
 
-    .toggle-knob-shadow {
+    .ripple-shadow {
       transform: translateX(23.5px);
     }
   }

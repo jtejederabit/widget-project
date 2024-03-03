@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-const props = defineProps<{
+defineProps<{
   id: number
   selectedColor: string
   handler: (color: string) => void
@@ -13,8 +13,8 @@ const colors = ref(['blue', 'green', 'beige', 'white', 'black'])
     <div
       v-for="color in colors"
       :key="color"
-      :class="['color-option', color, { active: props.selectedColor === color }]"
-      @click="props.handler(color)"
+      :class="['color-option', color, { active: selectedColor === color }]"
+      @click="handler(color)"
     ></div>
   </div>
 </template>
@@ -49,6 +49,7 @@ const colors = ref(['blue', 'green', 'beige', 'white', 'black'])
 
   &.active {
     box-shadow: inset 0 0 0 2px #b0b0b0;
+    transition: box-shadow 0.3s ease-in-out;
     opacity: 1;
   }
 

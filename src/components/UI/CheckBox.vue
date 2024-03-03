@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const props = defineProps<{
+defineProps<{
   id: number
   linked: boolean
   handler: () => void
@@ -7,21 +7,21 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div class="custom-checkbox">
+  <div class="checkbox-container">
     <input
       type="checkbox"
-      :id="`checkbox-${props.id}`"
-      :checked="props.linked"
-      @change="props.handler()"
+      :id="`checkbox-${id}`"
+      :checked="linked"
+      @change="handler()"
       hidden
     />
-    <label :for="`checkbox-${props.id}`" class="checkbox-label"></label>
-    <div class="toggle-knob-shadow"></div>
+    <label :for="`checkbox-${id}`" class="checkbox-label"></label>
+    <div class="ripple-shadow"></div>
   </div>
 </template>
 
 <style scoped lang="scss">
-.custom-checkbox {
+.checkbox-container {
   display: inline-block;
   vertical-align: middle;
   position: relative;
@@ -41,7 +41,7 @@ const props = defineProps<{
   z-index: 1;
 }
 
-.custom-checkbox:hover .toggle-knob-shadow {
+.checkbox-container:hover .ripple-shadow {
   opacity: 0.6;
 }
 .checkbox-label::after {
@@ -50,6 +50,7 @@ const props = defineProps<{
   width: 6px;
   height: 11px;
   border: solid var(--color-white);
+  border-radius: 20%;
   border-width: 0 3px 3px 0;
   transform: rotate(45deg);
   top: 0;
