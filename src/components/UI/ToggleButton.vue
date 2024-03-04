@@ -8,7 +8,7 @@ defineProps<{
 
 <template>
   <div class="toggle-button" :class="{ active: active }" @click="handler()">
-    <div class="ripple-shadow" :style="{ top: '-3.9px', left: '-3.1px' }" />
+    <div class="ripple-shadow" :style="{ width: '35px', height: '35px', top: '-6.4px', left: '-5.8px' }" />
     <div class="toggle-knob"></div>
   </div>
 </template>
